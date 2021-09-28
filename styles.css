@@ -1,0 +1,172 @@
+/* Root */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+/* Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url("./images/bg-desktop.svg");
+  background-color: var(--Violet);
+}
+
+/* Main container */
+
+.main-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 0.4fr;
+}
+
+/* logo */
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+  align-self: center;
+  padding: 3rem 0 3rem 0;
+}
+
+.logo img {
+  width: 200px;
+}
+
+/* Main content */
+.main-content {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Hero */
+
+.hero {
+  width: 100%;
+  align-self: center;
+}
+
+.hero img {
+  width: 100%;
+}
+
+/* header Part */
+.header {
+  align-self: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.main-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  color: rgb(219, 214, 214);
+  line-height: 1.1;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  margin: 2rem 0;
+  font-size: 17px;
+  line-height: 1.4;
+  color: rgb(243, 212, 243);
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  padding: 12px 40px;
+  border-radius: 35px;
+  border: none;
+  font-size: 17px;
+  background-color: rgb(241, 232, 232);
+  color: rgb(113, 89, 126);
+}
+
+.btn:hover {
+  background-color: var(--Soft-Magenta);
+  color: #fff;
+}
+
+/* Socials */
+.socials {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: end;
+}
+
+i {
+  margin-left: 2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.fa-facebook-f {
+  padding: 10px 13.5px;
+}
+
+i:hover {
+  color: var(--Soft-Magenta);
+  border: 1px solid var(--Soft-Magenta);
+}
+
+/* Media queries */
+@media (min-width: 375px) and (max-width: 700px) {
+  .main-grid {
+    overflow: visible;
+    min-height: auto;
+    grid-template-rows: 0.3fr 1fr 0.2fr;
+    padding: 0 1rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .header {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 10px 65px;
+  }
+
+  .socials {
+    align-self: center;
+    justify-self: center;
+    padding-bottom: 4rem;
+  }
+
+  i {
+    margin-left: 0;
+    margin: 0.8rem;
+  }
+}
